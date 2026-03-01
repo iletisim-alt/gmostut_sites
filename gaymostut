@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gazi Motorsporları Tasarım ve Uygulamaları</title>
+    <style>
+        /* Temel Ayarlar ve Renkler */
+        :root {
+            --primary-color: #e60000; /* Motorsporları Kırmızısı */
+            --bg-dark: #121212;
+            --text-light: #f4f4f4;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
+
+        /* Navbar (Gezinme Menüsü) */
+        header { background: #000; padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; border-bottom: 2px solid var(--primary-color); }
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); text-transform: uppercase; letter-spacing: 2px; }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav ul li a { font-weight: 500; transition: color 0.3s; }
+        nav ul li a:hover { color: var(--primary-color); }
+
+        /* Hero Section (Karşılama Ekranı) */
+        .hero { height: 80vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&q=80') center/cover; }
+        .hero h1 { font-size: 3rem; margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; margin-bottom: 20px; max-width: 600px; }
+        .btn { display: inline-block; padding: 10px 25px; background: var(--primary-color); color: #fff; font-weight: bold; border-radius: 5px; transition: background 0.3s; }
+        .btn:hover { background: #cc0000; }
+
+        /* Bölüm Ortak Stilleri */
+        section { padding: 4rem 5%; }
+        h2.section-title { text-align: center; font-size: 2.5rem; margin-bottom: 2rem; color: var(--primary-color); text-transform: uppercase; }
+
+        /* Galeri */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+        .gallery-item { height: 200px; background-color: #333; border-radius: 8px; overflow: hidden; }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s; }
+        .gallery-item img:hover { transform: scale(1.1); }
+
+        /* İletişim Formu */
+        .contact-container { max-width: 600px; margin: auto; background: #1e1e1e; padding: 30px; border-radius: 8px; border-top: 4px solid var(--primary-color); }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; }
+        .form-group input, .form-group textarea { width: 100%; padding: 10px; border: none; border-radius: 4px; background: #333; color: #fff; }
+        .form-group textarea { height: 120px; resize: none; }
+        .submit-btn { width: 100%; padding: 12px; background: var(--primary-color); border: none; color: white; font-size: 1rem; font-weight: bold; border-radius: 4px; cursor: pointer; }
+        .submit-btn:hover { background: #cc0000; }
+
+        /* Footer ve Instagram */
+        footer { background: #000; text-align: center; padding: 2rem; margin-top: 2rem; border-top: 1px solid #333; }
+        .instagram-link { display: inline-flex; align-items: center; gap: 10px; font-size: 1.2rem; margin-bottom: 15px; color: #E1306C; font-weight: bold; }
+        .instagram-link:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Gazi Motorsporları</div>
+        <nav>
+            <ul>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#anket">Aktif Anketler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hız, Tasarım ve Mühendislik</h1>
+        <p>Gazi Motorsporları Tasarım ve Uygulamaları topluluğu olarak pistlerde iz bırakıyoruz.</p>
+        <a href="#hakkimizda" class="btn">Bizi Tanıyın</a>
+    </section>
+
+    <section id="hakkimizda">
+        <h2 class="section-title">Hakkımızda</h2>
+        <p style="text-align: center; max-width: 800px; margin: auto; font-size: 1.1rem;">
+            Gazi Üniversitesi'nin vizyoner mühendis ve tasarımcı adaylarından oluşan ekibimiz, motorsporları dünyasına yenilikçi çözümler üretmek amacıyla kurulmuştur. Aracımızın aerodinamik tasarımından motor kalibrasyonuna kadar her detayı kendi atölyemizde özenle geliştiriyoruz.
+        </p>
+    </section>
+
+    <section id="galeri">
+        <h2 class="section-title">Galeri</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&q=80" alt="Araç 1"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&q=80" alt="Araç 2"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&q=80" alt="Atölye"></div>
+            <div class="gallery-item"><img src="https://images.unsplash.com/photo-1611821064430-0d40221e4c03?auto=format&fit=crop&q=80" alt="Yarış"></div>
+        </div>
+    </section>
+
+    <section id="anket" style="background: #1a1a1a;">
+        <h2 class="section-title">Aktif Anketler</h2>
+        <div style="text-align: center;">
+            <p>Şu an aktif bir anket bulunmamaktadır. (Bu alan yönetim panelinden eklenecektir.)</p>
+        </div>
+    </section>
+
+    <section id="iletisim">
+        <h2 class="section-title">İletişim</h2>
+        <div class="contact-container">
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" required placeholder="Adınız">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz</label>
+                    <input type="email" id="email" required placeholder="ornek@mail.com">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız</label>
+                    <textarea id="message" required placeholder="Bizimle iletişime geçin..."></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <a href="https://instagram.com/gazi_motorsporlari_kullanici_adiniz" target="_blank" class="instagram-link">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+            Bizi Instagram'da Takip Edin
+        </a>
+        <p>&copy; 2026 Gazi Motorsporları Tasarım ve Uygulamaları. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
